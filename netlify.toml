@@ -1,0 +1,32 @@
+# Netlify Configuration File
+# This tells Netlify how to build and deploy your site
+
+[build]
+  # Directory with the HTML file (root of your project)
+  publish = "."
+  
+  # No build command needed since it's a static HTML file
+  command = ""
+  
+  # Serverless functions directory
+  functions = "netlify/functions"
+
+# Redirect all /api/* requests to Netlify Functions
+[[redirects]]
+  from = "/api/send-email"
+  to = "/.netlify/functions/send-email"
+  status = 200
+  force = true
+
+# Set up environment variables (you'll add the actual values in Netlify dashboard)
+# BREVO_API_KEY = "your-api-key-here"
+# SENDER_EMAIL = "noreply@yourdomain.com"
+# SENDER_NAME = "Payment Templates"
+
+# Optional: Custom headers for security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer-when-downgrade"

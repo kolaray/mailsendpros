@@ -1,0 +1,23 @@
+{
+  "name": "email-template-sender",
+  "version": "2.0.0",
+  "description": "Email template sender with Brevo integration for Netlify",
+  "main": "index.html",
+  "scripts": {
+    "dev": "netlify dev",
+    "deploy": "netlify deploy --prod"
+  },
+  "keywords": [
+    "email",
+    "templates",
+    "brevo",
+    "netlify",
+    "serverless"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  }
+}
